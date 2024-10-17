@@ -7,22 +7,25 @@
     justify-content: space-between;
     color: $grey-color;
     padding: 50px 15vw;
-    width: 100%;
+    width: 94%;
   }
   // Title
   h1 {
     font-size: 1.8rem;
     font-family: $font-family;
     white-space: nowrap;
+    text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black,
+      -1px -1px 0 black;
   }
   h1:hover {
     color: $primary-color;
     cursor: pointer;
   }
   h2 {
-    font-size: 3rem;
-    color: $primary-color;
     text-align: center;
+    font-size: 3rem;
+    font-family: $font-family;
+    color: $primary-color;
   }
   // Liste nav
   ul {
@@ -32,6 +35,8 @@
     color: $grey-color;
     font-family: $font-family;
     white-space: nowrap;
+    text-shadow: 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black,
+      -1px -1px 0 black;
   }
   li:hover {
     color: $primary-color;
@@ -45,6 +50,7 @@
   .section-home {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
 
     h2 {
@@ -71,16 +77,55 @@
       color: $grey-color;
     }
   }
+
   .section-presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
     background-color: $primary-background-color;
+    padding-top: 150px;
+    h2 {
+      padding-bottom: 90px;
+      text-align: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15%;
+        border-bottom: 2px solid $brow-color;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      text-align: center;
+      color: $primary-color;
+      padding: 50px 25vw;
+    }
   }
+
+  .section-projet {
+    height: auto;
+    background-color: rgba(223, 223, 223, 0.8);
+    .projet-container {
+      height: 100vh;
+      margin: 0 10vw;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
   // Logo style
   .svg-scroll-container {
     display: flex;
     justify-content: center;
     width: 100%;
   }
+
   // Menu Burger style
 
   .sidenav {
@@ -106,13 +151,35 @@
     display: none;
   }
 
+  // button style
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    button {
+      padding: 15px;
+      background-color: $brow-color;
+      color: $darkblue-color;
+      cursor: pointer;
+      border-radius: 10px;
+      border: solid 3px $darkblue-color;
+    }
+    button:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+  }
+
   // 950px - 1200px (Tablette)
   @media only screen and (max-width: 1200px) {
     nav {
       display: flex;
       justify-content: center;
-      padding: 50px 5vw;
+      padding: 30px 5vw;
+      width: 100%;
     }
+    // Section responsive
     .section-home {
       h2 {
         margin-top: 50px;
@@ -125,9 +192,16 @@
       }
     }
 
+    .section-presentation {
+      p {
+        padding: 20px 5vw;
+      }
+    }
+
     .svg-scroll-container {
       margin-top: 40px;
     }
+
     // MenuBurger style
     .sidenav {
       display: flex;
