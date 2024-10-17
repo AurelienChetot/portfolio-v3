@@ -1,3 +1,82 @@
-.container {
-  background-color: $primary-color;
+.container-page {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $grey-color;
+    padding: 50px 15vw;
+  }
+  // Title
+  h1 {
+    font-size: 1.8rem;
+    font-family: $font-family;
+    white-space: nowrap;
+  }
+  h1:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+  h2 {
+    font-size: 3rem;
+    color: $primary-color;
+    text-align: center;
+  }
+  // Liste nav
+  ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    color: $grey-color;
+    font-family: $font-family;
+    white-space: nowrap;
+  }
+  li:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+  // Section
+  .section-home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    h2 {
+      position: relative;
+      padding: 90px 0;
+      text-align: center;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 15%;
+        border-bottom: 2px solid #8f7854;
+      }
+    }
+    p {
+      padding: 90px 25vw;
+      text-align: center;
+      font-size: 1.5rem;
+      color: $grey-color;
+    }
+  }
+  .section-presentation {
+    height: 100vh;
+    background-color: $primary-background-color;
+  }
+  // Logo style
+  .svg-scroll-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  // 950px - 1200px (Tablette)
+  @media only screen and (max-width: 1200px) {
+    nav {
+      padding: 50px 5vw;
+    }
+  }
 }
