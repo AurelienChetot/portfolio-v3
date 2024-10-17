@@ -8,19 +8,24 @@ import SCROLL from "../app/assets/svg/scroll.svg";
 import BgParticle from "../app/components/BgParticle";
 
 export default function Home() {
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+      });
+    }
+  };
+
   return (
     <main className="container-page">
       <BgParticle />
       <section id="top-page" className="section-home">
         <header>
           <nav>
-            <h1>
-              <a href="#top-page">AURÉLIEN CHETOT</a>
-            </h1>
+            <h1 onClick={() => handleScroll("top-page")}>AURÉLIEN CHETOT</h1>
             <ul>
-              <li>
-                <a href="#presentation">Accueil</a>
-              </li>
+              <li onClick={() => handleScroll("presentation")}>Accueil</li>
               <li>Mes Projets</li>
               <li>Formation</li>
               <li>CV en ligne</li>
