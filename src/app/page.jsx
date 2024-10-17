@@ -11,12 +11,16 @@ export default function Home() {
   return (
     <main className="container-page">
       <BgParticle />
-      <section className="section-home">
+      <section id="top-page" className="section-home">
         <header>
           <nav>
-            <h1>AURÉLIEN CHETOT</h1>
+            <h1>
+              <a href="#top-page">AURÉLIEN CHETOT</a>
+            </h1>
             <ul>
-              <li>Accueil</li>
+              <li>
+                <a href="#presentation">Accueil</a>
+              </li>
               <li>Mes Projets</li>
               <li>Formation</li>
               <li>CV en ligne</li>
@@ -38,7 +42,7 @@ export default function Home() {
           <Image src={SCROLL} alt="Scroll down" width={100} height={100} />
         </div>
       </section>
-      <section className="section-presentation">
+      <section id="presentation" className="section-presentation">
         <h2>
           Bienvenue sur mon <br /> Portfolio
         </h2>

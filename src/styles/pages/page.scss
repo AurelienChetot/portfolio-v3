@@ -34,6 +34,10 @@
     color: $primary-color;
     cursor: pointer;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
   // Section
   .section-home {
     display: flex;
