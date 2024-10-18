@@ -1,4 +1,23 @@
 .container-page {
+  // Scroll effect
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+
+  section {
+    scroll-snap-align: start;
+  }
+
+  // Scroll bar remove
+  &::-webkit-scrollbar {
+    display: none; /* Pour Chrome, Safari et Opera */
+  }
+
+  & {
+    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+    scrollbar-width: none; /* Pour Firefox */
+  }
+
   // nav style
   nav {
     position: fixed;
@@ -106,18 +125,6 @@
       text-align: center;
       color: $primary-color;
       padding: 50px 25vw;
-    }
-  }
-
-  .section-projet {
-    height: auto;
-    // background-color: $darkblue-color;
-    // background-color: rgba(223, 223, 223, 0.8);
-    .projet-container {
-      height: 100vh;
-      margin: 0 10vw;
-      background-color: rgba(255, 255, 255, 0.8);
-      // background-color: rgba(255, 255, 255, 0.4);
     }
   }
 

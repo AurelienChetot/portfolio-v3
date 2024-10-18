@@ -6,23 +6,14 @@ import SCROLL from "../app/assets/svg/scroll.svg";
 import MENU from "../app/assets/svg/menu.svg";
 import CROSS from "../app/assets/svg/cross.svg";
 
-// import particle
+// import components
 import BgParticle from "../app/components/BgParticle";
+import Projet from "../app/components/Projet";
 
 // import react
 import { useState } from "react";
 
 export default function Home() {
-  // scroll li
-  const handleScroll = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop,
-      });
-    }
-  };
-
   // menu burger
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -31,6 +22,18 @@ export default function Home() {
   };
   const closeMenu = () => {
     setMenuOpen(false);
+  };
+
+  const handleScroll = (event, id) => {
+    // Empeche le comportement du lien "#"
+    event.preventDefault();
+    // Recupere l'element ciblé (id)
+    const element = document.getElementById(id);
+    // fait défiler la page vers l'element
+    if (element) {
+      element.scrollIntoView({ behavior: "auto" });
+    }
+    closeMenu();
   };
 
   return (
@@ -43,13 +46,10 @@ export default function Home() {
               <Image className="menu-svg" src={MENU} alt="menuSvg" />
             </span>
           </a>
-          <h1
-            onClick={() => {
-              handleScroll("top-page");
-              closeMenu();
-            }}
-          >
-            AURÉLIEN CHETOT
+          <h1>
+            <a href="#top-page" onClick={(e) => handleScroll(e, "top-page")}>
+              AURÉLIEN CHETOT
+            </a>
           </h1>
           <div className={menuOpen ? "sidenav active" : "sidenav"}>
             <a className="close" onClick={toggleMenu}>
@@ -58,21 +58,18 @@ export default function Home() {
               </span>
             </a>
             <ul>
-              <li
-                onClick={() => {
-                  handleScroll("presentation");
-                  closeMenu();
-                }}
-              >
-                Accueil
+              <li>
+                <a
+                  href="#presentation"
+                  onClick={(e) => handleScroll(e, "presentation")}
+                >
+                  Accueil
+                </a>
               </li>
-              <li
-                onClick={() => {
-                  handleScroll("projet");
-                  closeMenu();
-                }}
-              >
-                Mes Projets
+              <li>
+                <a href="#projet" onClick={(e) => handleScroll(e, "projet")}>
+                  Mes Projets
+                </a>
               </li>
               <li>Formation</li>
               <li>CV en ligne</li>
@@ -112,23 +109,12 @@ export default function Home() {
         </p>
 
         <div className="button-container">
-          <button
-            onClick={() => {
-              handleScroll("projet");
-            }}
-          >
-            Continuez
-          </button>
+          <a href="#projet" onClick={(e) => handleScroll(e, "projet")}>
+            <button>Continuez</button>
+          </a>
         </div>
       </section>
-      <section id="projet" className="section-projet">
-        <div className="projet-container">
-          <h3>Mes Projets</h3>
-          <p>Image</p>
-          <p>Texte</p>
-          <p>categorie</p>
-        </div>
-      </section>
+      <Projet />
     </main>
   );
 }
