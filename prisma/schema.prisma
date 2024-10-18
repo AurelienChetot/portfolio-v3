@@ -1,0 +1,22 @@
+// prisma/schema.prisma
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Projet {
+  id          Int      @id @default(autoincrement()) // ID unique pour chaque projet
+  title       String   // Titre du projet
+  description String   // Description du projet
+  techno      String   // Technologies utilisées
+  design      String   // Design du projet
+  categorie   String   // Categorie du site
+  githubLink  String   // Lien GitHub
+  siteLink    String   // Lien vers le site
+  image       String   // URL de l'image du projet
+}
