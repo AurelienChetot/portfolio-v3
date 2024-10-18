@@ -111,11 +111,13 @@
 
   .section-projet {
     height: auto;
-    background-color: rgba(223, 223, 223, 0.8);
+    // background-color: $darkblue-color;
+    // background-color: rgba(223, 223, 223, 0.8);
     .projet-container {
       height: 100vh;
       margin: 0 10vw;
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.8);
+      // background-color: rgba(255, 255, 255, 0.4);
     }
   }
 

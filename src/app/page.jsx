@@ -110,6 +110,7 @@ export default function Home() {
           dans le développement web. <br /> Je vous invite à poursuivre votre
           visite et vous remercie de votre attention.
         </p>
+
         <div className="button-container">
           <button
             onClick={() => {
