@@ -58,7 +58,6 @@ export default function Popup({ projet, onClose }) {
   );
 }
 
-// Validation des props
 Popup.propTypes = {
   projet: PropTypes.shape({
     image: PropTypes.string,
