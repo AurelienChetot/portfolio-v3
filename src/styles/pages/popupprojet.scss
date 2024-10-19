@@ -1,0 +1,91 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  h4 {
+    font-size: 2rem;
+    padding-left: 1vw;
+  }
+  .popup-categorie {
+    color: $black-color;
+    font-size: 1.3rem;
+    padding-left: 1vw;
+  }
+  .description-text,
+  .techno-text,
+  .design-text {
+    color: $black-color;
+    padding-top: 10px;
+    font-weight: bold;
+    padding-left: 1vw;
+    font-size: 1.2rem;
+  }
+  .description-data,
+  .techno-data,
+  .design-data {
+    color: $black-color;
+    padding: 0 1vw;
+  }
+}
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-color;
+  border-radius: 10px;
+  border: solid 2px black;
+  width: 20vw;
+  height: auto;
+}
+.img-popup-container {
+  display: flex;
+  justify-content: center;
+}
+.popup-image {
+  height: auto;
+  width: 90%;
+  border: 1px solid black;
+}
+
+// button style
+.button-popup-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  button {
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 5px;
+    color: $primary-color;
+    background-color: $secondary-color;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  }
+  button:hover {
+    color: $darkblue-color;
+    background-color: $brow-color;
+  }
+}
+.btn-close-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.close-btn {
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 5px;
+  background-color: #b64f4f;
+  color: $primary-color;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+.close-btn:hover {
+  background-color: red;
+}

@@ -5,23 +5,23 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-  }
-  h5 {
-    padding: 75px 0;
-    font-size: 2.4rem;
-    color: $primary-color;
-    font-family: $font-family;
-    text-decoration: underline;
-    text-decoration-color: $secondary-color;
+    p {
+      color: $darkblue-color;
+    }
+    h5 {
+      padding: 75px 0;
+      font-size: 2.4rem;
+      color: $primary-color;
+      font-family: $font-family;
+      text-decoration: underline;
+      text-decoration-color: $secondary-color;
+    }
   }
   .container-formation {
     height: auto;
     width: 40%;
     border-radius: 10px;
     background-color: $background-white-opacity;
-  }
-  p {
-    color: $darkblue-color;
   }
 
   .formation-flex {
