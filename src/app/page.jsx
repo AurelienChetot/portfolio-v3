@@ -10,6 +10,7 @@ import CROSS from "../app/assets/svg/cross.svg";
 import BgParticle from "../app/components/BgParticle";
 import Projet from "../app/components/Projet";
 import Formation from "../app/components/Formation";
+import Cv from "../app/components/Cv";
 
 // import react
 import { useState } from "react";
@@ -69,11 +70,19 @@ export default function Home() {
               </li>
               <li>
                 <a href="#projet" onClick={(e) => handleScroll(e, "projet")}>
-                  Mes Projets
+                  Projets
                 </a>
               </li>
-              <li>Formation</li>
-              <li>CV en ligne</li>
+              <li>
+                {" "}
+                <a
+                  href="#formation"
+                  onClick={(e) => handleScroll(e, "formation")}
+                >
+                  Formation
+                </a>
+              </li>
+              <li>CV</li>
               <li>Contact</li>
             </ul>
           </div>
@@ -117,6 +126,7 @@ export default function Home() {
       </section>
       <Projet />
       <Formation />
+      <Cv />
     </main>
   );
 }

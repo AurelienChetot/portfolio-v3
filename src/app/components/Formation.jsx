@@ -29,7 +29,7 @@ export default function Formation() {
     return <p>Loading...</p>;
   }
   return (
-    <section className="section-formation">
+    <section id="formation" className="section-formation">
       <h5>Mes Formations</h5>
       <div className="container-formation">
         {formations.length === 0 ? (
