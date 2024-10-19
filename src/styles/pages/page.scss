@@ -165,7 +165,7 @@
   .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin: 25px 0;
 
     button {
       padding: 15px;
@@ -281,6 +281,25 @@
       width: 70px;
       height: auto;
       padding: 0;
+    }
+  }
+  // Media querry 850 >
+  @media only screen and (max-width: 850px) {
+    .section-home {
+      p {
+        font-size: 1.2rem;
+      }
+      h2 {
+        margin-top: 0;
+      }
+    }
+    .section-presentation {
+      h2 {
+        padding-bottom: 20px;
+      }
+      p {
+        font-size: 1.1rem;
+      }
     }
   }
 }
