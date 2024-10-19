@@ -4,23 +4,76 @@
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  p {
+  h6 {
+    text-decoration: underline;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    text-underline-offset: 15px;
+    font-family: $font-family;
     color: $black-color;
+    text-decoration-color: $secondary-color;
+  }
+  p {
+    margin: 20px 0;
+    color: $black-color;
+  }
+  label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 5px;
+  }
+  input {
+    border: 2px solid $black-color;
+    padding: 2px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    color: $secondary-color;
+  }
+  .icone-text-container {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
   }
 }
 .top-color-contact {
-  background-color: $background-black-opacity;
   height: 20vh;
   width: 100%;
+  background-color: $background-black-opacity;
 }
 .bottom-color-contact {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 60vh;
   width: 100%;
+
   background-color: $secondary-background-color;
 }
+
+// Formulaire style
+
+.flex-name-mail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.flex-message {
+  display: flex;
+  flex-direction: column;
+  textarea {
+    resize: none;
+    font-weight: bold;
+    border: 2px solid $black-color;
+    height: 150px;
+    padding: 5px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    font-family: $font-family;
+  }
+}
+
+// Footer style
 .footer-container {
   display: flex;
   flex-direction: column;
