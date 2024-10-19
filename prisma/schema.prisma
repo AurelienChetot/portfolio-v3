@@ -10,7 +10,7 @@ generator client {
 }
 
 model Projet {
-  id          Int      @id @default(autoincrement()) // ID unique pour chaque projet
+  id          Int      @id @default(autoincrement())
   title       String   // Titre du projet
   description String   // Description du projet
   techno      String   // Technologies utilisées
@@ -20,3 +20,12 @@ model Projet {
   siteLink    String   // Lien vers le site
   image       String   // URL de l'image du projet
 }
+
+model Formation {
+  id          Int      @id @default(autoincrement())
+  image       String   // URL de l'image
+  title       String   // Titre de la formation
+  description String   // Description de la formation
+  date        String   // Date de la formation en string
+}
+

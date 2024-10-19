@@ -9,6 +9,7 @@ import CROSS from "../app/assets/svg/cross.svg";
 // import components
 import BgParticle from "../app/components/BgParticle";
 import Projet from "../app/components/Projet";
+import Formation from "../app/components/Formation";
 
 // import react
 import { useState } from "react";
@@ -115,6 +116,7 @@ export default function Home() {
         </div>
       </section>
       <Projet />
+      <Formation />
     </main>
   );
 }

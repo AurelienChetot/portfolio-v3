@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Projet() {
-  const [projets, setProjets] = useState([]); // État pour stocker les projets
-  const [loading, setLoading] = useState(true); // État pour gérer le chargement
+  const [projets, setProjets] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProjets = async () => {
@@ -14,19 +14,19 @@ export default function Projet() {
           throw new Error("Erreur lors de la récupération des projets");
         }
         const data = await response.json();
-        setProjets(data); // Met à jour l'état avec les données récupérées
+        setProjets(data);
       } catch (error) {
         console.error(error);
       } finally {
-        setLoading(false); // Fin du chargement
+        setLoading(false);
       }
     };
 
-    fetchProjets(); // Appelle la fonction pour récupérer les projets
-  }, []); // Le tableau vide signifie que cela ne s'exécute qu'une fois au montage du composant
+    fetchProjets();
+  }, []);
 
   if (loading) {
-    return <p>Loading...</p>; // Affiche un message de chargement
+    return <p>Loading...</p>;
   }
 
   return (
