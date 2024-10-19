@@ -40,6 +40,7 @@
       overflow-y: auto;
       padding: 20px;
     }
+
     .flex-contenu {
       display: flex;
       flex-direction: column;
@@ -70,6 +71,12 @@
       .projet-container {
         grid-template-columns: repeat(1, 1fr);
         margin: 0 2vw;
+        margin-bottom: 10px;
+        height: 525px;
+        .img-projet {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }

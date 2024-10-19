@@ -101,6 +101,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+    z-index: -1;
     min-height: 100vh;
     background-color: $primary-background-color;
     padding-top: 150px;
@@ -202,8 +204,10 @@
     }
 
     .section-presentation {
+      padding-top: 50px;
       p {
         padding: 20px 5vw;
+        font-size: 1.3rem;
       }
     }
 
