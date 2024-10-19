@@ -11,6 +11,7 @@ import BgParticle from "../app/components/BgParticle";
 import Projet from "../app/components/Projet";
 import Formation from "../app/components/Formation";
 import Cv from "../app/components/Cv";
+import Contact from "../app/components/Contact";
 
 // import react
 import { useState } from "react";
@@ -74,7 +75,6 @@ export default function Home() {
                 </a>
               </li>
               <li>
-                {" "}
                 <a
                   href="#formation"
                   onClick={(e) => handleScroll(e, "formation")}
@@ -82,8 +82,17 @@ export default function Home() {
                   Formation
                 </a>
               </li>
-              <li>CV</li>
-              <li>Contact</li>
+              <li>
+                <a href="#cv" onClick={(e) => handleScroll(e, "cv")}>
+                  Cv
+                </a>
+              </li>
+              <li>
+                {" "}
+                <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -127,6 +136,7 @@ export default function Home() {
       <Projet />
       <Formation />
       <Cv />
+      <Contact />
     </main>
   );
 }
