@@ -1,12 +1,13 @@
 .section-contact {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   min-height: 100vh;
   width: 100%;
   h6 {
     text-decoration: underline;
-    margin-top: 20px;
+
     font-size: 2.5rem;
     text-underline-offset: 15px;
     font-family: $font-family;
@@ -28,16 +29,32 @@
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 10px;
-    color: $secondary-color;
+    color: $black-color;
   }
   .icone-text-container {
     display: flex;
     align-items: flex-end;
     margin-bottom: 5px;
   }
+  // Button style
+  button {
+    margin-top: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 40px;
+    width: 100px;
+    background-color: $darkblue-color;
+    color: $primary-color;
+  }
+  button:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-color: $secondary-color;
+    border: solid 2px $darkblue-color;
+  }
 }
 .top-color-contact {
-  height: 20vh;
+  height: 15vh;
   width: 100%;
   background-color: $background-black-opacity;
 }
@@ -45,9 +62,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 60vh;
+  justify-content: center;
+  min-height: 65vh;
   width: 100%;
-
   background-color: $secondary-background-color;
 }
 
@@ -102,6 +119,40 @@
     .caractere-style {
       margin-top: 30px;
       color: $primary-color;
+    }
+  }
+}
+// Media querry 1200px - 1400px
+@media only screen and (max-width: 1400px) {
+}
+
+// Media querry 850px - 1200px
+@media only screen and (max-width: 1200px) {
+}
+// Media querry < 850
+@media only screen and (max-width: 850px) {
+  .section-contact {
+    h6 {
+      font-size: 2rem;
+    }
+    p {
+      margin: 0;
+      margin-top: 15px;
+    }
+    input {
+      font-size: 1rem;
+    }
+    label {
+      font-size: 1.2rem;
+    }
+    img {
+      height: 25px;
+    }
+  }
+  .flex-message {
+    textarea {
+      height: 100px;
+      font-size: 1rem;
     }
   }
 }

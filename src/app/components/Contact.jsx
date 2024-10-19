@@ -41,7 +41,7 @@ export default function Contact() {
           <div className="flex-message">
             <div className="icone-text-container">
               <Image src={Message} alt="" width={35} height={35} />
-              <label htmlFor="msg">Message</label>
+              <label htmlFor="msg">Message *</label>
             </div>
             <textarea
               id="msg"
