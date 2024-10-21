@@ -99,7 +99,8 @@ export default function Home() {
       </header>
       <section id="top-page" className="section-home">
         <h2 className="animate-title">
-          Bienvenue sur mon <br /> Portfolio
+          <span className="line">Bienvenue sur mon</span>
+          <span className="line1">Portfolio</span>
         </h2>
         <p>
           Développeur web en pleine évolution, je suis à la recherche d’une
