@@ -1,6 +1,11 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import emailjs from "emailjs-com";
+import Toast, {
+  emailSucces,
+  emailError,
+  captchaError,
+} from "./ToasterContainer";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import User from "../assets/svg/user.svg";
@@ -19,7 +24,9 @@ export default function Contact() {
 
     // Vérifier le token
     if (!token) {
-      alert("Veuillez compléter le reCAPTCHA avant d'envoyer le message.");
+      captchaError(
+        "Veuillez compléter le reCAPTCHA avant d'envoyer le message."
+      );
       return;
     }
 
@@ -34,16 +41,17 @@ export default function Contact() {
       )
       .then((result) => {
         console.log("Email envoyé avec succès :", result.text);
-        alert("Votre message a été envoyé avec succès !");
+        emailSucces("Votre message a été envoyé avec succès !");
       })
       .catch((error) => {
         console.error("Erreur lors de l'envoi de l'email :", error);
-        alert("Une erreur s'est produite. Veuillez réessayer.");
+        emailError("Une erreur s'est produite. Veuillez réessayer.");
       });
   };
 
   return (
     <section id="contact" className="section-contact">
+      <Toast />
       <div className="top-color-contact"></div>
       <div className="bottom-color-contact">
         <h6>Contact</h6>
