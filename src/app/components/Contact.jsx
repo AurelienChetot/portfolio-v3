@@ -1,16 +1,27 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
-import emailjs from "emailjs-com"; // Importer EmailJS
+import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import User from "../assets/svg/user.svg";
 import Arroba from "../assets/svg/arroba.svg";
 import Message from "../assets/svg/message.svg";
 
 export default function Contact() {
-  const form = useRef(); // Référence au formulaire
+  const form = useRef();
+  const recaptchaRef = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault(); // Empêcher le rechargement de la page
+    e.preventDefault();
+
+    // Obtenir le token
+    const token = recaptchaRef.current.getValue();
+
+    // Vérifier le token
+    if (!token) {
+      alert("Veuillez compléter le reCAPTCHA avant d'envoyer le message.");
+      return;
+    }
 
     // Envoi de l'email via EmailJS
     emailjs
@@ -18,7 +29,8 @@ export default function Contact() {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
+        { "g-recaptcha-response": token }
       )
       .then((result) => {
         console.log("Email envoyé avec succès :", result.text);
@@ -70,12 +82,18 @@ export default function Contact() {
             </div>
             <textarea
               id="msg"
-              name="message" // Correspond à {{message}} dans le template
+              name="message"
               required
               aria-required="true"
             ></textarea>
           </div>
-          <button type="submit">Envoyer</button>
+          <div className="button-container">
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+              ref={recaptchaRef} // Appellé qd l'utilisateur "coche"
+            />
+            <button type="submit">Envoyer</button>
+          </div>
         </form>
       </div>
       <footer className="footer-container">

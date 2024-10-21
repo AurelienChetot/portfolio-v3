@@ -36,20 +36,25 @@
     margin-bottom: 5px;
   }
   // Button style
-  button {
-    margin-top: 5px;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 40px;
-    width: 100px;
-    background-color: $darkblue-color;
-    color: $primary-color;
-  }
-  button:hover {
-    background-color: $secondary-color;
-    color: $primary-color;
-    border-color: $secondary-color;
-    border: solid 2px $darkblue-color;
+  .button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    button {
+      margin-top: 5px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 40px;
+      width: 100px;
+      background-color: $darkblue-color;
+      color: $primary-color;
+    }
+    button:hover {
+      background-color: $secondary-color;
+      color: $primary-color;
+      border-color: $secondary-color;
+      border: solid 2px $darkblue-color;
+    }
   }
 }
 .top-color-contact {
@@ -87,6 +92,8 @@
     font-family: $font-family;
   }
 }
+
+// Captcha style
 
 // Footer style
 .footer-container {
@@ -146,6 +153,9 @@
     img {
       height: 25px;
     }
+  }
+  .button-container {
+    flex-direction: column;
   }
   .flex-message {
     textarea {
