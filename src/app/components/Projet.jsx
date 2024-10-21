@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Popup from "../components/PopupProjet"; // Importer le composant Popup
+import Popup from "../components/PopupProjet";
 
 export default function Projet() {
   const [projets, setProjets] = useState([]);
@@ -16,7 +16,8 @@ export default function Projet() {
           throw new Error("Erreur lors de la récupération des projets");
         }
         const data = await response.json();
-        setProjets(data);
+        // affiche aléatoirement les projets
+        setProjets(data.sort(() => Math.random() - 0.5));
       } catch (error) {
         console.error(error);
       } finally {
@@ -65,7 +66,6 @@ export default function Projet() {
           ))
         )}
       </div>
-      {/* Utilisation du popup components  */}
       {showPopup && (
         <Popup projet={selectedProjet} onClose={handleClosePopup} />
       )}

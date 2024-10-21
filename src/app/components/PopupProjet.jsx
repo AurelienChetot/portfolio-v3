@@ -22,7 +22,7 @@ export default function Popup({ projet, onClose }) {
         <p className="description-data">{projet.description}</p>
         <p className="techno-text">Techno utilisées :</p>
         <p className="techno-data">{projet.techno}</p>
-        <p className="design-text">Design utilisées :</p>
+        <p className="design-text">Design utilisés :</p>
         <p className="design-data">{projet.design}</p>
         <div className="button-popup-container">
           <button>

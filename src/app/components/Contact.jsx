@@ -16,6 +16,11 @@ export default function Contact() {
   const form = useRef();
   const recaptchaRef = useRef();
 
+  // Pour vider les champs
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -42,6 +47,11 @@ export default function Contact() {
       .then((result) => {
         console.log("Email envoyé avec succès :", result.text);
         emailSucces("Votre message a été envoyé avec succès !");
+        // Vide les champs
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        messageRef.current.value = "";
+        recaptchaRef.current.reset();
       })
       .catch((error) => {
         console.error("Erreur lors de l'envoi de l'email :", error);
@@ -68,6 +78,7 @@ export default function Contact() {
               name="from_name"
               required
               aria-required="true"
+              ref={nameRef}
             />
           </div>
           <div className="flex-name-mail">
@@ -81,6 +92,7 @@ export default function Contact() {
               name="user_email"
               required
               aria-required="true"
+              ref={emailRef}
             />
           </div>
           <div className="flex-message">
@@ -93,6 +105,7 @@ export default function Contact() {
               name="message"
               required
               aria-required="true"
+              ref={messageRef}
             ></textarea>
           </div>
           <div className="button-container">
