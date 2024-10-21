@@ -98,7 +98,7 @@ export default function Home() {
         </nav>
       </header>
       <section id="top-page" className="section-home">
-        <h2>
+        <h2 className="animate-title">
           Bienvenue sur mon <br /> Portfolio
         </h2>
         <p>
