@@ -76,7 +76,9 @@ export default function CvOnline() {
             <a onClick={closeMenu}>Atouts</a>
           </li>
           <li className="">
-            <a onClick={closeMenu}>Extra (CV3D)</a>
+            <a onClick={closeMenu}>
+              Extra <br /> (CV3D)
+            </a>
           </li>
         </ul>
       </div>

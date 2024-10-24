@@ -1,0 +1,26 @@
+.projetcv-container {
+  h1 {
+    font-size: 1.5rem;
+    color: $darkblue-color;
+    letter-spacing: 0.03em;
+  }
+  .title-margin {
+    margin-top: 15px;
+  }
+  p {
+    font-size: 0.9rem;
+    font-family: $font-family;
+  }
+  span {
+    color: $secondary-color;
+    font-weight: bold;
+  }
+  a {
+    color: $darkblue-color;
+    font-weight: bold;
+  }
+  a:hover {
+    color: $secondary-color;
+    font-weight: bold;
+  }
+}

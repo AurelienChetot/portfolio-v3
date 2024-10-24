@@ -1,0 +1,24 @@
+.skillcv-container {
+  h1 {
+    font-size: 1.5rem;
+    color: $darkblue-color;
+    letter-spacing: 0.03em;
+    font-family: $font-family;
+    // font-weight: bold;
+  }
+  .title-margin {
+    margin-top: 15px;
+  }
+  p {
+    font-size: 1rem;
+    font-family: $font-family;
+  }
+  span {
+    text-decoration: underline;
+  }
+  .color-point {
+    text-decoration: none;
+    font-weight: bold;
+    color: $secondary-color;
+  }
+}
