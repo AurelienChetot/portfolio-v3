@@ -1,0 +1,20 @@
+.formationcv-container {
+  h1,
+  h2,
+  h3 {
+    font-size: 1.5rem;
+    color: $darkblue-color;
+    letter-spacing: 0.03em;
+  }
+  .title-margin {
+    margin-top: 15px;
+  }
+  p {
+    font-size: 0.9rem;
+    font-family: $font-family;
+  }
+  span {
+    color: $secondary-color;
+    font-weight: bold;
+  }
+}
