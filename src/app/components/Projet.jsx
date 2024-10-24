@@ -5,7 +5,7 @@ import Popup from "../components/PopupProjet";
 export default function Projet() {
   const [projets, setProjets] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedProjet, setSelectedProjet] = useState(null); // État pour le projet sélectionné
+  const [selectedProjet, setSelectedProjet] = useState(null); // État pour le projet selectionné
   const [showPopup, setShowPopup] = useState(false); // État pour l'affichage du popup
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Projet() {
           throw new Error("Erreur lors de la récupération des projets");
         }
         const data = await response.json();
-        // affiche aléatoirement les projets
+        // affiche aléatoirement les projet
         setProjets(data.sort(() => Math.random() - 0.5));
       } catch (error) {
         console.error(error);
@@ -28,7 +28,7 @@ export default function Projet() {
     fetchProjets();
   }, []);
 
-  // Popup projets
+  // Popup projet
 
   const handleProjectClick = (projet) => {
     setSelectedProjet(projet);
