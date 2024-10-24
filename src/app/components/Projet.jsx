@@ -57,7 +57,7 @@ export default function Projet() {
                 className="img-projet"
                 src={projet.image}
                 alt={projet.title}
-                width={300}
+                width={355}
                 height={200}
               />
               <h4>{projet.title}</h4>

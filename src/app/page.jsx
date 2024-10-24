@@ -115,6 +115,7 @@ export default function Home() {
       </section>
       <section id="presentation" className="section-presentation">
         <h2>Bonjour :)</h2>
+        <div className="border-bottom"></div>
         <p>
           Ancien mécanicien, j'ai choisi de me réorienter vers le développement
           web pour relever de nouveaux défis. Titulaire du titre professionnel

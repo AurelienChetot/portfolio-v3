@@ -59,7 +59,7 @@ export default function CvOnline() {
       <div className={menuOpen ? "sidenav-cv active" : "sidenav-cv"}>
         <p className="close" onClick={toggleMenu}>
           <span className="cursor-menu-close">
-            <Image className="cross-svg" src={CROSS} alt="cross" />
+            <Image className="cross-svg-cv" src={CROSS} alt="cross" />
           </span>
         </p>
         <ul className="">
@@ -99,7 +99,7 @@ export default function CvOnline() {
       </div>
       <a id="openBtn" onClick={toggleMenu}>
         <span className="burger-icon">
-          <Image className="menu-svg" src={Menu} alt="menuSvg" />
+          <Image className="menu-svg-cv" src={Menu} alt="menuSvg" />
         </span>
       </a>
     </section>
