@@ -9,6 +9,8 @@ const nextConfig = {
       },
     ],
   },
+  //générer des source maps en production
+  productionBrowserSourceMaps: true,
 };
 
 export default nextConfig;

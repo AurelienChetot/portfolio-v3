@@ -204,6 +204,7 @@
   // button style
   .button-container {
     display: flex;
+    align-items: center;
     justify-content: center;
     margin: 25px 0;
 
@@ -331,6 +332,7 @@
       }
       h2 {
         margin-top: 0;
+        font-size: 2rem;
       }
     }
     .section-presentation {

@@ -2,6 +2,9 @@
 
 import React, { Suspense, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
+
+import Link from "next/link";
+
 import {
   OrbitControls,
   useGLTF,
@@ -212,6 +215,20 @@ const Cv3D = () => {
       >
         Déplacer le terminal
       </button>
+      <Link href="/">
+        <button
+          style={{
+            position: "absolute",
+            top: "80px",
+            left: "40px",
+            padding: "10px 20px",
+            fontSize: "16px",
+            cursor: "pointer",
+          }}
+        >
+          Revenir au site
+        </button>
+      </Link>
     </div>
   );
 };

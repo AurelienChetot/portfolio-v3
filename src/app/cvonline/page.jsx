@@ -1,8 +1,11 @@
 "use client"; // Indique que ce composant est un Client Component
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+
+// Import Next
+import Image from "next/image";
+import Link from "next/link";
 
 import CROSS from "../assets/svg/cross.svg";
 import Menu from "../assets/svg/menu.svg";
@@ -14,7 +17,7 @@ import ProjetCV from "../components/ProjetCv";
 import SkillCV from "../components/SkillCv";
 import FormationCV from "../components/FormationCV";
 import ExperienceCV from "../components/ExperienceCv";
-import AtoutCV from "../components/AtoutCv";
+import AProposCv from "../components/AProposCv";
 
 // animation framer motion
 const animationVariants = {
@@ -44,8 +47,8 @@ export default function CvOnline() {
         return <FormationCV />;
       case "Experience":
         return <ExperienceCV />;
-      case "Atout":
-        return <AtoutCV />;
+      case "APropos":
+        return <AProposCv />;
       default:
         return <HomeCV />;
     }
@@ -72,15 +75,13 @@ export default function CvOnline() {
           <li onClick={() => setActiveSection("Experience")}>
             <a onClick={closeMenu}>Experience</a>
           </li>
-          <li onClick={() => setActiveSection("Atout")}>
-            <a onClick={closeMenu}>Atouts</a>
-          </li>
-          <li className="">
-            <a onClick={closeMenu}>
-              Extra <br /> (CV3D)
-            </a>
+          <li onClick={() => setActiveSection("APropos")}>
+            <a onClick={closeMenu}>À Propos</a>
           </li>
         </ul>
+        <Link href="/cv3d">
+          <p className="extra-cv">Extra CV3D</p>
+        </Link>
       </div>
       <div className="cv-container">
         <AnimatePresence mode="wait">
