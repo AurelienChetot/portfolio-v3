@@ -3,6 +3,7 @@
     font-size: 1.5rem;
     color: $darkblue-color;
     letter-spacing: 0.03em;
+    font-family: $font-family;
   }
   .title-margin {
     margin-top: 15px;
@@ -22,5 +23,15 @@
   a:hover {
     color: $secondary-color;
     font-weight: bold;
+  }
+}
+
+// Media querry 850 >
+@media only screen and (max-width: 850px) {
+  .projetcv-container {
+    margin: 0 10px;
+    h1 {
+      font-size: 1.2rem;
+    }
   }
 }

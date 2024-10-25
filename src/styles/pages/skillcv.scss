@@ -4,7 +4,6 @@
     color: $darkblue-color;
     letter-spacing: 0.03em;
     font-family: $font-family;
-    // font-weight: bold;
   }
   .title-margin {
     margin-top: 15px;
@@ -20,5 +19,17 @@
     text-decoration: none;
     font-weight: bold;
     color: $secondary-color;
+  }
+}
+// Media querry 850 >
+@media only screen and (max-width: 850px) {
+  .skillcv-container {
+    margin: 0 10px;
+    h1 {
+      font-size: 1.2rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
   }
 }

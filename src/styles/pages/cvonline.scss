@@ -21,7 +21,6 @@
   }
   .text-home {
     font-size: 2rem;
-    // font-family: $font-family;
   }
 
   /* The typing effect */
@@ -93,6 +92,22 @@
   list-style-type: none;
   font-family: $font-family;
   color: $primary-color;
-  padding-top: 5vh;
+  margin-top: 5vh;
   font-size: 1.2rem;
+}
+// Media querry 850 >
+@media only screen and (max-width: 850px) {
+  .cv-container {
+    .text-home {
+      white-space: normal;
+      padding: 0 10px;
+    }
+  }
+  .sidenav-cv {
+    width: 30%;
+    padding: 0 10px;
+  }
+  .sidenav-cv li {
+    font-size: 0.9rem;
+  }
 }

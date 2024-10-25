@@ -4,11 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Import Next
-import Image from "next/image";
 import Link from "next/link";
 
-import CROSS from "../assets/svg/cross.svg";
-import Menu from "../assets/svg/menu.svg";
 import BgParticle from "../components/BgParticle";
 
 // import Components
@@ -27,15 +24,7 @@ const animationVariants = {
 };
 
 export default function CvOnline() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
 
   const renderSection = () => {
     switch (activeSection) {
@@ -56,27 +45,20 @@ export default function CvOnline() {
   return (
     <section className="cv-online-container">
       <BgParticle />
-      <div className={menuOpen ? "sidenav-cv active" : "sidenav-cv"}>
-        <p className="close" onClick={toggleMenu}>
-          <span className="cursor-menu-close">
-            <Image className="cross-svg-cv" src={CROSS} alt="cross" />
-          </span>
-        </p>
-        <ul className="">
+      <div className="sidenav-cv">
+        <ul>
           <li onClick={() => setActiveSection("Projet")}>
-            <a onClick={closeMenu}>Projet</a>
+            <a>Projet</a>
           </li>
           <li onClick={() => setActiveSection("Skill")}>
-            <a onClick={closeMenu}>Skills</a>
+            <a>Skills</a>
           </li>
           <li onClick={() => setActiveSection("Formation")}>
-            <a onClick={closeMenu}>Formation</a>
+            <a>Formation</a>
           </li>
-          <li onClick={() => setActiveSection("Experience")}>
-            <a onClick={closeMenu}>Experience</a>
-          </li>
+          <li onClick={() => setActiveSection("Experience")}>Experience</li>
           <li onClick={() => setActiveSection("APropos")}>
-            <a onClick={closeMenu}>À Propos</a>
+            <a>À Propos</a>
           </li>
         </ul>
         <Link href="/cv3d">
@@ -97,11 +79,6 @@ export default function CvOnline() {
           </motion.div>
         </AnimatePresence>
       </div>
-      <a id="openBtn" onClick={toggleMenu}>
-        <span className="burger-icon">
-          <Image className="menu-svg-cv" src={Menu} alt="menuSvg" />
-        </span>
-      </a>
     </section>
   );
 }

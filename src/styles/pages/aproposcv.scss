@@ -32,3 +32,11 @@
     border: solid 2px $darkblue-color;
   }
 }
+// Media querry 850 >
+@media only screen and (max-width: 850px) {
+  .a-propos-cv-container {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -6,8 +6,9 @@
   h5,
   h6 {
     font-size: 1.5rem;
-    color: $darkblue-color;
     letter-spacing: 0.03em;
+    color: $darkblue-color;
+    font-family: $font-family;
   }
   .title-margin {
     margin-top: 15px;
@@ -19,5 +20,19 @@
   p {
     font-family: $font-family;
     font-size: 0.9rem;
+  }
+}
+// Media querry 850 >
+@media only screen and (max-width: 850px) {
+  .experiencecv-container {
+    margin: 0 10px;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 1.2rem;
+    }
   }
 }
