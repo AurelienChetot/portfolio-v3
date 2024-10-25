@@ -5,7 +5,7 @@ const prisma = new PrismaClient();
 
 export async function GET(request) {
   try {
-    const projets = await prisma.formation.findMany();
+    const projets = await prisma.projet.findMany();
     return new Response(JSON.stringify(projets), {
       status: 200,
       headers: { "Content-Type": "application/json" },
