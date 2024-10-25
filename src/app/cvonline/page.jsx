@@ -12,9 +12,9 @@ import BgParticle from "../components/BgParticle";
 import HomeCV from "../components/HomeCv";
 import ProjetCV from "../components/ProjetCv";
 import SkillCV from "../components/SkillCv";
-import FormationCV from "../components/FormationCV";
 import ExperienceCV from "../components/ExperienceCv";
 import AProposCv from "../components/AProposCv";
+import FormationCV from "../components/FormationCv";
 
 // animation framer motion
 const animationVariants = {
