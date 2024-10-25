@@ -56,7 +56,9 @@ export default function CvOnline() {
           <li onClick={() => setActiveSection("Formation")}>
             <a>Formation</a>
           </li>
-          <li onClick={() => setActiveSection("Experience")}>Experience</li>
+          <li onClick={() => setActiveSection("Experience")}>
+            <a>Experience</a>
+          </li>
           <li onClick={() => setActiveSection("APropos")}>
             <a>À Propos</a>
           </li>
